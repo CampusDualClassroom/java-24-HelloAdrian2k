@@ -12,17 +12,15 @@ public class Exercise24 {
         queue.add("House");
         return queue;
     }
+
     public static void printAndEmptyQueue(Queue<String> queue) {
-        while (!queue.isEmpty()) {
-            System.out.println(queue.peek());
-            queue.poll();
-        }
+        queue.forEach(System.out::println); //se imprime por consola cada queue item
+        queue.clear();
     }
 
     public static void main(String[] args) {
-        Queue<String> queue = createQueue();
         System.out.println("COLA CREADA:\n");
-        printAndEmptyQueue(queue);
+        printAndEmptyQueue(createQueue());
     }
 
 }
